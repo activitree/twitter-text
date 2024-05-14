@@ -12,7 +12,7 @@ const invalidDomainChars = stringSupplant('#{punct}#{spacesGroup}#{invalidCharsG
   punct,
   spacesGroup,
   invalidCharsGroup,
-  directionalMarkersGroup
+  directionalMarkersGroup,
 });
 
 export default invalidDomainChars;

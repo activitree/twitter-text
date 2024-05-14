@@ -6,7 +6,7 @@ import configs from './configs';
 import getTweetLength from './getTweetLength';
 import hasInvalidCharacters from './hasInvalidCharacters';
 
-export default function(text, options = configs.defaults) {
+export default function (text, options = configs.defaults) {
   if (!text) {
     return 'empty';
   }

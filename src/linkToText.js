@@ -5,7 +5,7 @@
 import stringSupplant from './lib/stringSupplant';
 import tagAttrs from './tagAttrs';
 
-export default function(entity, text, attributes, options) {
+export default function (entity, text, attributes, options) {
   if (!options.suppressNoFollow) {
     attributes.rel = 'nofollow';
   }
@@ -19,7 +19,7 @@ export default function(entity, text, attributes, options) {
   }
   const d = {
     text: text,
-    attr: tagAttrs(attributes)
+    attr: tagAttrs(attributes),
   };
   return stringSupplant('<a#{attr}>#{text}</a>', d);
 }

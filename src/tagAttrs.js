@@ -8,10 +8,10 @@ const BOOLEAN_ATTRIBUTES = {
   disabled: true,
   readonly: true,
   multiple: true,
-  checked: true
+  checked: true,
 };
 
-export default function(attributes) {
+export default function (attributes) {
   let htmlAttrs = '';
   for (const k in attributes) {
     let v = attributes[k];

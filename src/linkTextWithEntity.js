@@ -5,7 +5,7 @@
 import htmlEscape from './htmlEscape';
 import stringSupplant from './lib/stringSupplant';
 
-export default function(entity, options) {
+export default function (entity, options) {
   const displayUrl = entity.display_url;
   const expandedUrl = entity.expanded_url;
 
@@ -39,7 +39,7 @@ export default function(entity, options) {
       // Portion of expandedUrl that comes after displayUrl
       afterDisplayUrl: expandedUrl.substr(displayUrlIndex + displayUrlSansEllipses.length),
       precedingEllipsis: displayUrl.match(/^…/) ? '…' : '',
-      followingEllipsis: displayUrl.match(/…$/) ? '…' : ''
+      followingEllipsis: displayUrl.match(/…$/) ? '…' : '',
     };
     for (const k in v) {
       if (v.hasOwnProperty(k)) {

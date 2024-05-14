@@ -27,7 +27,7 @@ import urlHasHttps from './regexp/urlHasHttps';
  * displayRangeStart {int} beginning index of display text
  * displayRangeEnd {int} end index of display text (inclusive) in utf16
  */
-const parseTweet = function(text = '', options = configs.defaults) {
+const parseTweet = function (text = '', options = configs.defaults) {
   const mergedOptions = Object.keys(options).length ? options : configs.defaults;
   const { defaultWeight, emojiParsingEnabled, scale, maxWeightedTweetLength, transformedURLLength } = mergedOptions;
   const normalizedText = typeof String.prototype.normalize === 'function' ? text.normalize() : text;
@@ -78,11 +78,11 @@ const parseTweet = function(text = '', options = configs.defaults) {
     validRangeStart: 0,
     validRangeEnd: validDisplayIndex,
     displayRangeStart: 0,
-    displayRangeEnd: text.length > 0 ? text.length - 1 : 0
+    displayRangeEnd: text.length > 0 ? text.length - 1 : 0,
   };
 };
 
-const transformEntitiesToHash = entities =>
+const transformEntitiesToHash = (entities) =>
   entities.reduce((map, entity) => {
     map[entity.indices[0]] = entity;
     return map;
@@ -93,7 +93,7 @@ const isSurrogatePair = (text, cIndex) => {
   if (cIndex < text.length - 1) {
     const c = text.charCodeAt(cIndex);
     const cNext = text.charCodeAt(cIndex + 1);
-    return 0xd800 <= c && c <= 0xdbff && (0xdc00 <= cNext && cNext <= 0xdfff);
+    return 0xd800 <= c && c <= 0xdbff && 0xdc00 <= cNext && cNext <= 0xdfff;
   }
   return false;
 };

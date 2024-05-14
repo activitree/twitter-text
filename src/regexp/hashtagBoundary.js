@@ -8,7 +8,7 @@ import regexSupplant from '../lib/regexSupplant';
 
 const hashtagBoundary = regexSupplant(/(?:^|\uFE0E|\uFE0F|$|(?!#{hashtagAlphaNumeric}|&)#{codePoint})/, {
   codePoint,
-  hashtagAlphaNumeric
+  hashtagAlphaNumeric,
 });
 
 export default hashtagBoundary;

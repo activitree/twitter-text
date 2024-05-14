@@ -2,10 +2,13 @@
  * Rollup is only used for development. See the build:prod script in package.json
  * for the production build command.
  */
-import babel from 'rollup-plugin-babel';
-import commonjs from 'rollup-plugin-commonjs';
+// import babel from 'rollup-plugin-babel';
+// import commonjs from 'rollup-plugin-commonjs';
+// import resolve from 'rollup-plugin-node-resolve';
+import { babel } from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
 import license from 'rollup-plugin-license';
-import resolve from 'rollup-plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 const banner = `/*!
  * <%= pkg.name %> <%= pkg.version %>
@@ -24,17 +27,17 @@ export default {
   output: {
     file: 'dist/twitter-text.js',
     format: 'umd',
-    name: 'twttr.txt'
+    name: 'twttr.txt',
   },
   plugins: [
     babel({
       exclude: ['node_modules/**'],
-      runtimeHelpers: true
+      runtimeHelpers: true,
     }),
-    resolve({ preferBuiltins: false }),
+    nodeResolve({ preferBuiltins: false }),
     commonjs(),
     license({
-      banner: banner
-    })
-  ]
+      banner: banner,
+    }),
+  ],
 };

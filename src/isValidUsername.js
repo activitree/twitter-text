@@ -4,7 +4,7 @@
 
 import extractMentions from './extractMentions';
 
-export default function(username) {
+export default function (username) {
   if (!username) {
     return false;
   }

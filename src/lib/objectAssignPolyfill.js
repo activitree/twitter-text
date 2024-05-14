@@ -2,7 +2,7 @@
 // Licensed under the Apache License, Version 2.0
 // http://www.apache.org/licenses/LICENSE-2.0
 
-(function() {
+(function () {
   if (typeof Object.assign != 'function') {
     // Must be writable: true, enumerable: false, configurable: true
     Object.defineProperty(Object, 'assign', {
@@ -32,7 +32,7 @@
         return to;
       },
       writable: true,
-      configurable: true
+      configurable: true,
     });
   }
 })();

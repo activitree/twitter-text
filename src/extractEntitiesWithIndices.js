@@ -8,7 +8,7 @@ import extractMentionsOrListsWithIndices from './extractMentionsOrListsWithIndic
 import extractUrlsWithIndices from './extractUrlsWithIndices';
 import removeOverlappingEntities from './removeOverlappingEntities';
 
-export default function(text, options) {
+export default function (text, options) {
   const entities = extractUrlsWithIndices(text, options)
     .concat(extractMentionsOrListsWithIndices(text))
     .concat(extractHashtagsWithIndices(text, { checkUrlOverlap: false }))

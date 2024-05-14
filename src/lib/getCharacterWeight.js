@@ -2,7 +2,7 @@
 // Licensed under the Apache License, Version 2.0
 // http://www.apache.org/licenses/LICENSE-2.0
 
-const getCharacterWeight = function(ch, options) {
+const getCharacterWeight = function (ch, options) {
   const { defaultWeight, ranges } = options;
   let weight = defaultWeight;
   const chCodePoint = ch.charCodeAt(0);

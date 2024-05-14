@@ -12,7 +12,7 @@ const validateUrlDomain = regexSupplant(
   {
     validateUrlSubDomainSegment,
     validateUrlDomainSegment,
-    validateUrlDomainTld
+    validateUrlDomainTld,
   }
 );
 

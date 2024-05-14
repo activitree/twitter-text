@@ -4,7 +4,7 @@
 
 import extractMentionsWithIndices from './extractMentionsWithIndices';
 
-export default function(text) {
+export default function (text) {
   let screenNamesOnly = [],
     screenNamesWithIndices = extractMentionsWithIndices(text);
 

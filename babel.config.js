@@ -17,7 +17,7 @@ module.exports = api => {
         '@babel/preset-env',
         {
           useBuiltIns: 'usage',
-          corejs: 2,
+          corejs: 3,
           modules: api.env('commonjs') || api.env('test') ? 'commonjs' : false,
           forceAllTransforms: api.env('production')
         }

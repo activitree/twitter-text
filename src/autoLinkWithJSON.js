@@ -5,7 +5,7 @@
 import autoLinkEntities from './autoLinkEntities';
 import modifyIndicesFromUnicodeToUTF16 from './modifyIndicesFromUnicodeToUTF16';
 
-export default function(text, json, options) {
+export default function (text, json, options) {
   // map JSON entity to twitter-text entity
   if (json.user_mentions) {
     for (var i = 0; i < json.user_mentions.length; i++) {

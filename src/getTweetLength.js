@@ -10,7 +10,7 @@ import nonBmpCodePairs from './regexp/nonBmpCodePairs';
 import parseTweet from './parseTweet';
 import urlHasHttps from './regexp/urlHasHttps';
 
-const getTweetLength = function(text, options = configs.defaults) {
+const getTweetLength = function (text, options = configs.defaults) {
   return parseTweet(text, options).weightedLength;
 };
 

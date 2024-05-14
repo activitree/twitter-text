@@ -8,7 +8,7 @@ import linkToText from './linkToText';
 import linkTextWithEntity from './linkTextWithEntity';
 import urlHasProtocol from './regexp/urlHasProtocol';
 
-export default function(entity, text, options) {
+export default function (entity, text, options) {
   let url = entity.url;
   const displayUrl = url;
   let linkText = htmlEscape(displayUrl);

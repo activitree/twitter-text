@@ -4,7 +4,7 @@
 
 import extractHashtags from './extractHashtags';
 
-export default function(hashtag) {
+export default function (hashtag) {
   if (!hashtag) {
     return false;
   }

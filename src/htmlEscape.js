@@ -7,13 +7,13 @@ const HTML_ENTITIES = {
   '>': '&gt;',
   '<': '&lt;',
   '"': '&quot;',
-  "'": '&#39;'
+  "'": '&#39;',
 };
 
-export default function(text) {
+export default function (text) {
   return (
     text &&
-    text.replace(/[&"'><]/g, function(character) {
+    text.replace(/[&"'><]/g, function (character) {
       return HTML_ENTITIES[character];
     })
   );

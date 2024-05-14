@@ -2,7 +2,7 @@
 // Licensed under the Apache License, Version 2.0
 // http://www.apache.org/licenses/LICENSE-2.0
 
-export default function(text, entities, indicesInUTF16) {
+export default function (text, entities, indicesInUTF16) {
   if (entities.length == 0) {
     return;
   }
@@ -11,7 +11,7 @@ export default function(text, entities, indicesInUTF16) {
   let codePointIndex = 0;
 
   // sort entities by start index
-  entities.sort(function(a, b) {
+  entities.sort(function (a, b) {
     return a.indices[0] - b.indices[0];
   });
   let entityIndex = 0;

@@ -97,5 +97,5 @@ export default {
   parseTweet,
   splitTags,
   standardizeIndices,
-  tagAttrs
+  tagAttrs,
 };

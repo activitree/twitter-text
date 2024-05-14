@@ -21,7 +21,7 @@ function isValidMatch(string, regex, optional) {
   return !string || (string.match(regex) && RegExp['$&'] === string);
 }
 
-export default function(url, unicodeDomains, requireProtocol) {
+export default function (url, unicodeDomains, requireProtocol) {
   if (unicodeDomains == null) {
     unicodeDomains = true;
   }

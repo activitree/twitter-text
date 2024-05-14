@@ -4,7 +4,7 @@
 
 import extractUrlsWithIndices from './extractUrlsWithIndices';
 
-export default function(text, options) {
+export default function (text, options) {
   const urlsOnly = [];
   const urlsWithIndices = extractUrlsWithIndices(text, options);
 

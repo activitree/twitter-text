@@ -6,7 +6,7 @@ const BOOLEAN_ATTRIBUTES = {
   disabled: true,
   readonly: true,
   multiple: true,
-  checked: true
+  checked: true,
 };
 
 // Options which should not be passed as HTML attributes
@@ -36,10 +36,10 @@ const OPTIONS_NOT_ATTRIBUTES = {
   invisibleTagAttrs: true,
   linkAttributeBlock: true,
   linkTextBlock: true,
-  htmlEscapeNonEntities: true
+  htmlEscapeNonEntities: true,
 };
 
-export default function(options) {
+export default function (options) {
   const htmlAttrs = {};
   for (const k in options) {
     let v = options[k];

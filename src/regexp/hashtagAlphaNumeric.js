@@ -18,7 +18,7 @@ const hashtagAlphaNumeric = regexSupplant(
     hashtagSpecialChars,
     nonBmpCodePairs,
     astralLetterAndMarks,
-    astralNumerals
+    astralNumerals,
   }
 );
 

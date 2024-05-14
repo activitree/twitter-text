@@ -11,7 +11,7 @@ import regexSupplant from '../lib/regexSupplant';
 const hashtagAlpha = regexSupplant(/(?:[#{bmpLetterAndMarks}]|(?=#{nonBmpCodePairs})(?:#{astralLetterAndMarks}))/, {
   bmpLetterAndMarks,
   nonBmpCodePairs,
-  astralLetterAndMarks
+  astralLetterAndMarks,
 });
 
 export default hashtagAlpha;

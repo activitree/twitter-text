@@ -7,6 +7,6 @@
  */
 import nonBmpCodePairs from './regexp/nonBmpCodePairs';
 
-export default function(text) {
+export default function (text) {
   return text.replace(nonBmpCodePairs, ' ').length;
 }

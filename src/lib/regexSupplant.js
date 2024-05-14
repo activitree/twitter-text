@@ -3,7 +3,7 @@
 // http://www.apache.org/licenses/LICENSE-2.0
 
 // Builds a RegExp
-export default function(regex, map, flags) {
+export default function (regex, map, flags) {
   flags = flags || '';
   if (typeof regex !== 'string') {
     if (regex.global && flags.indexOf('g') < 0) {
@@ -20,7 +20,7 @@ export default function(regex, map, flags) {
   }
 
   return new RegExp(
-    regex.replace(/#\{(\w+)\}/g, function(match, name) {
+    regex.replace(/#\{(\w+)\}/g, function (match, name) {
       let newRegex = map[name] || '';
       if (typeof newRegex !== 'string') {
         newRegex = newRegex.source;

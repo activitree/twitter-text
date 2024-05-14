@@ -13,7 +13,7 @@ const DEFAULT_PROTOCOL_OPTIONS = { extractUrlsWithoutProtocol: true };
 const MAX_URL_LENGTH = 4096;
 const MAX_TCO_SLUG_LENGTH = 40;
 
-const extractUrlsWithIndices = function(text, options = DEFAULT_PROTOCOL_OPTIONS) {
+const extractUrlsWithIndices = function (text, options = DEFAULT_PROTOCOL_OPTIONS) {
   if (!text || (options.extractUrlsWithoutProtocol ? !text.match(/\./) : !text.match(/:/))) {
     return [];
   }
@@ -40,12 +40,12 @@ const extractUrlsWithIndices = function(text, options = DEFAULT_PROTOCOL_OPTIONS
 
       let lastUrl = null;
       let asciiEndPosition = 0;
-      domain.replace(validAsciiDomain, function(asciiDomain) {
+      domain.replace(validAsciiDomain, function (asciiDomain) {
         const asciiStartPosition = domain.indexOf(asciiDomain, asciiEndPosition);
         asciiEndPosition = asciiStartPosition + asciiDomain.length;
         lastUrl = {
           url: asciiDomain,
-          indices: [startPosition + asciiStartPosition, startPosition + asciiEndPosition]
+          indices: [startPosition + asciiStartPosition, startPosition + asciiEndPosition],
         };
         urls.push(lastUrl);
       });
@@ -73,7 +73,7 @@ const extractUrlsWithIndices = function(text, options = DEFAULT_PROTOCOL_OPTIONS
       }
       urls.push({
         url: url,
-        indices: [startPosition, endPosition]
+        indices: [startPosition, endPosition],
       });
     }
   }
@@ -81,7 +81,7 @@ const extractUrlsWithIndices = function(text, options = DEFAULT_PROTOCOL_OPTIONS
   return urls;
 };
 
-const isValidUrl = function(url, protocol, domain) {
+const isValidUrl = function (url, protocol, domain) {
   let urlLength = url.length;
   const punycodeEncodedDomain = idna.toAscii(domain);
   if (!punycodeEncodedDomain || !punycodeEncodedDomain.length) {

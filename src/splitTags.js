@@ -6,7 +6,7 @@
 // except that won't work in IE, where empty strings are ommitted
 // so "<>".split(/<|>/) => [] in IE, but is ["", "", ""] in all others
 // but "<<".split("<") => ["", "", ""]
-export default function(text) {
+export default function (text) {
   let firstSplits = text.split('<'),
     secondSplits,
     allSplits = [],

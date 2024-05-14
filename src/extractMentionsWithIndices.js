@@ -4,7 +4,7 @@
 
 import extractMentionsOrListsWithIndices from './extractMentionsOrListsWithIndices';
 
-export default function(text) {
+export default function (text) {
   const mentions = [];
   let mentionOrList;
   const mentionsOrLists = extractMentionsOrListsWithIndices(text);
@@ -14,7 +14,7 @@ export default function(text) {
     if (mentionOrList.listSlug === '') {
       mentions.push({
         screenName: mentionOrList.screenName,
-        indices: mentionOrList.indices
+        indices: mentionOrList.indices,
       });
     }
   }

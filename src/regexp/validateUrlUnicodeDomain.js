@@ -13,7 +13,7 @@ const validateUrlUnicodeDomain = regexSupplant(
   {
     validateUrlUnicodeSubDomainSegment,
     validateUrlUnicodeDomainSegment,
-    validateUrlUnicodeDomainTld
+    validateUrlUnicodeDomainTld,
   }
 );
 

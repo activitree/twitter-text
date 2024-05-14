@@ -19,7 +19,7 @@ const validUrlPath = regexSupplant(
   {
     validGeneralUrlPathChars,
     validUrlBalancedParens,
-    validUrlPathEndingChars
+    validUrlPathEndingChars,
   },
   'i'
 );

@@ -8,7 +8,7 @@ import hashSigns from './regexp/hashSigns';
 import removeOverlappingEntities from './removeOverlappingEntities';
 import validHashtag from './regexp/validHashtag';
 
-const extractHashtagsWithIndices = function(text, options) {
+const extractHashtagsWithIndices = function (text, options) {
   if (!options) {
     options = { checkUrlOverlap: true };
   }
@@ -19,7 +19,7 @@ const extractHashtagsWithIndices = function(text, options) {
 
   let tags = [];
 
-  text.replace(validHashtag, function(match, before, hash, hashText, offset, chunk) {
+  text.replace(validHashtag, function (match, before, hash, hashText, offset, chunk) {
     const after = chunk.slice(offset + match.length);
     if (after.match(endHashtagMatch)) {
       return;
@@ -28,7 +28,7 @@ const extractHashtagsWithIndices = function(text, options) {
     const endPosition = startPosition + hashText.length + 1;
     tags.push({
       hashtag: hashText,
-      indices: [startPosition, endPosition]
+      indices: [startPosition, endPosition],
     });
   });
 

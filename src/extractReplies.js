@@ -5,7 +5,7 @@
 import endMentionMatch from './regexp/endMentionMatch';
 import validReply from './regexp/validReply';
 
-export default function(text) {
+export default function (text) {
   if (!text) {
     return null;
   }

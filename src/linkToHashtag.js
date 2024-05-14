@@ -7,7 +7,7 @@ import htmlEscape from './htmlEscape';
 import rtlChars from './regexp/rtlChars';
 import linkToTextWithSymbol from './linkToTextWithSymbol';
 
-export default function(entity, text, options) {
+export default function (entity, text, options) {
   const hash = text.substring(entity.indices[0], entity.indices[0] + 1);
   const hashtag = htmlEscape(entity.hashtag);
   const attrs = clone(options.htmlAttrs || {});

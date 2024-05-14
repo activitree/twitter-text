@@ -4,7 +4,7 @@
 
 import splitTags from './splitTags';
 
-export default function(text, hits, options) {
+export default function (text, hits, options) {
   const defaultHighlightTag = 'em';
 
   hits = hits || [];

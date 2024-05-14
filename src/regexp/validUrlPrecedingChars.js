@@ -9,7 +9,7 @@ const validUrlPrecedingChars = regexSupplant(
   /(?:[^A-Za-z0-9@＠$#＃#{invalidCharsGroup}]|[#{directionalMarkersGroup}]|^)/,
   {
     invalidCharsGroup,
-    directionalMarkersGroup
+    directionalMarkersGroup,
   }
 );
 export default validUrlPrecedingChars;

@@ -157,5 +157,5 @@ export default {
   validUrlPathEndingChars,
   validUrlPrecedingChars,
   validUrlQueryChars,
-  validUrlQueryEndingChars
+  validUrlQueryEndingChars,
 };

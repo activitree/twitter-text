@@ -6,7 +6,7 @@ import atSigns from './regexp/atSigns';
 import htmlEscape from './htmlEscape';
 import linkToText from './linkToText';
 
-export default function(entity, symbol, text, attributes, options) {
+export default function (entity, symbol, text, attributes, options) {
   const taggedSymbol = options.symbolTag ? `<${options.symbolTag}>${symbol}</${options.symbolTag}>` : symbol;
   text = htmlEscape(text);
   const taggedText = options.textWithSymbolTag

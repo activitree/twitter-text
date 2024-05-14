@@ -19,7 +19,7 @@ const DEFAULT_HASHTAG_CLASS = 'tweet-url hashtag';
 // Default CSS class for auto-linked cashtags (along with the url class)
 const DEFAULT_CASHTAG_CLASS = 'tweet-url cashtag';
 
-export default function(text, entities, options) {
+export default function (text, entities, options) {
   var options = clone(options || {});
   options.hashtagClass = options.hashtagClass || DEFAULT_HASHTAG_CLASS;
   options.hashtagUrlBase = options.hashtagUrlBase || 'https://twitter.com/search?q=%23';
@@ -46,13 +46,13 @@ export default function(text, entities, options) {
   let beginIndex = 0;
 
   // sort entities by start index
-  entities.sort(function(a, b) {
+  entities.sort(function (a, b) {
     return a.indices[0] - b.indices[0];
   });
 
   const nonEntity = options.htmlEscapeNonEntities
     ? htmlEscape
-    : function(text) {
+    : function (text) {
         return text;
       };
 

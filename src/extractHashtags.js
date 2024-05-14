@@ -4,7 +4,7 @@
 
 import extractHashtagsWithIndices from './extractHashtagsWithIndices';
 
-export default function(text) {
+export default function (text) {
   const hashtagsOnly = [];
   const hashtagsWithIndices = extractHashtagsWithIndices(text);
   for (let i = 0; i < hashtagsWithIndices.length; i++) {

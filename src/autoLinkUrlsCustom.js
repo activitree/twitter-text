@@ -5,9 +5,9 @@
 import autoLinkEntities from './autoLinkEntities';
 import extractUrlsWithIndices from './extractUrlsWithIndices';
 
-export default function(text, options) {
+export default function (text, options) {
   const entities = extractUrlsWithIndices(text, {
-    extractUrlsWithoutProtocol: false
+    extractUrlsWithoutProtocol: false,
   });
   return autoLinkEntities(text, entities, options);
 }

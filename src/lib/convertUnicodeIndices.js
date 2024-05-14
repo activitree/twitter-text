@@ -6,7 +6,7 @@
  * Copied from https://github.com/twitter/twitter-text/blob/master/js/twitter-text.js
  */
 
-const convertUnicodeIndices = function(text, entities, indicesInUTF16) {
+const convertUnicodeIndices = function (text, entities, indicesInUTF16) {
   if (entities.length === 0) {
     return;
   }
@@ -15,7 +15,7 @@ const convertUnicodeIndices = function(text, entities, indicesInUTF16) {
   let codePointIndex = 0;
 
   // sort entities by start index
-  entities.sort(function(a, b) {
+  entities.sort(function (a, b) {
     return a.indices[0] - b.indices[0];
   });
   let entityIndex = 0;
